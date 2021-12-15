@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.3/dayjs.min.js"
+      integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.3/plugin/relativeTime.min.js"
+      integrity="sha512-BQqXM2ye6+98YyRQzE676pY2Bc4d3o/fBNlBQyKv2J9oKwp9K/4BVqFWIJBx1zKlAJ8M0PIJR5Yp51FsnSUynQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      dayjs.extend(window.dayjs_plugin_relativeTime);
+    </script>
+    <script src="data.js"></script>
+    <title>Twittler - Vanila JS</title>
+  </head>
+
+  <body>
+    <!-- 여기에 HTML 구조를 작성하세요. 아래 코드는 예제이며, 얼마든지 바꿀 수 있습니다 -->
+    <div id="root">
+      <header>
+        <h1>twittler</h1>
+        <p>
+          Welcome to the twittler of
+          <span class="tag">codestates</span>
+        </p>
+        <p>This twittler uses Vanila.js</p>
+      </header>
+
+      <main>
+        <section class="form white">
+          <div>
+            <div class="form__wrapper"><span class="form__label">Username</span> <input id="usernameInput" class="form__input" type="text" /></div>
+            <div class="form__wrapper"><span class="form__label">Message</span> <input id="messageInput" class="form__input" type="text" /></div>
+          </div>
+
+          <div>
+            <div>
+              <button id="tweetButton">
+                <b>Tweet!</b>
+              </button>
+              <button id="randomButton">
+                <b>Check Tweets!</b>
+              </button>
+              <button id="goBackButton">
+                <b>Go Back!</b>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tweet lists -->
+        <section id="tweetlist" class="white"></section>
+      </main>
+
+      <footer>
+        <img class="codestatesLogo__img" src="https://urclass-images.s3.ap-northeast-2.amazonaws.com/5f0b56234d32e527ec999653_Codestates_Fulllogo_White.png" alt="logo" />
+      </footer>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
